@@ -1,0 +1,1069 @@
+TimeQuest Timing Analyzer report for VGA
+Tue Jun 23 21:20:11 2015
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'pll1|altpll_component|pll|clk[0]'
+ 12. Slow Model Hold: 'pll1|altpll_component|pll|clk[0]'
+ 13. Slow Model Minimum Pulse Width: 'clk'
+ 14. Slow Model Minimum Pulse Width: 'pll1|altpll_component|pll|clk[0]'
+ 15. Clock to Output Times
+ 16. Minimum Clock to Output Times
+ 17. Fast Model Setup Summary
+ 18. Fast Model Hold Summary
+ 19. Fast Model Recovery Summary
+ 20. Fast Model Removal Summary
+ 21. Fast Model Minimum Pulse Width Summary
+ 22. Fast Model Setup: 'pll1|altpll_component|pll|clk[0]'
+ 23. Fast Model Hold: 'pll1|altpll_component|pll|clk[0]'
+ 24. Fast Model Minimum Pulse Width: 'clk'
+ 25. Fast Model Minimum Pulse Width: 'pll1|altpll_component|pll|clk[0]'
+ 26. Clock to Output Times
+ 27. Minimum Clock to Output Times
+ 28. Multicorner Timing Analysis Summary
+ 29. Clock to Output Times
+ 30. Minimum Clock to Output Times
+ 31. Setup Transfers
+ 32. Hold Transfers
+ 33. Report TCCS
+ 34. Report RSKM
+ 35. Unconstrained Paths
+ 36. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; VGA                                                               ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C8Q208C8                                                       ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                                              ;
++----------------------------------+-----------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+------------------------------------+--------------------------------------+
+; Clock Name                       ; Type      ; Period ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source                             ; Targets                              ;
++----------------------------------+-----------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+------------------------------------+--------------------------------------+
+; clk                              ; Base      ; 20.000 ; 50.0 MHz  ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                    ; { clk }                              ;
+; pll1|altpll_component|pll|clk[0] ; Generated ; 25.000 ; 40.0 MHz  ; 0.000 ; 12.500 ; 50.00      ; 5         ; 4           ;       ;        ;           ;            ; false    ; clk    ; pll1|altpll_component|pll|inclk[0] ; { pll1|altpll_component|pll|clk[0] } ;
++----------------------------------+-----------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+------------------------------------+--------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Slow Model Fmax Summary                                               ;
++-----------+-----------------+----------------------------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name                       ; Note ;
++-----------+-----------------+----------------------------------+------+
+; 84.82 MHz ; 84.82 MHz       ; pll1|altpll_component|pll|clk[0] ;      ;
++-----------+-----------------+----------------------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------------------------------+
+; Slow Model Setup Summary                                  ;
++----------------------------------+--------+---------------+
+; Clock                            ; Slack  ; End Point TNS ;
++----------------------------------+--------+---------------+
+; pll1|altpll_component|pll|clk[0] ; 13.211 ; 0.000         ;
++----------------------------------+--------+---------------+
+
+
++----------------------------------------------------------+
+; Slow Model Hold Summary                                  ;
++----------------------------------+-------+---------------+
+; Clock                            ; Slack ; End Point TNS ;
++----------------------------------+-------+---------------+
+; pll1|altpll_component|pll|clk[0] ; 0.753 ; 0.000         ;
++----------------------------------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++-----------------------------------------------------------+
+; Slow Model Minimum Pulse Width Summary                    ;
++----------------------------------+--------+---------------+
+; Clock                            ; Slack  ; End Point TNS ;
++----------------------------------+--------+---------------+
+; clk                              ; 10.000 ; 0.000         ;
+; pll1|altpll_component|pll|clk[0] ; 11.258 ; 0.000         ;
++----------------------------------+--------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'pll1|altpll_component|pll|clk[0]'                                                                                                              ;
++--------+---------------------+---------------------+----------------------------------+----------------------------------+--------------+------------+------------+
+; Slack  ; From Node           ; To Node             ; Launch Clock                     ; Latch Clock                      ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------+---------------------+----------------------------------+----------------------------------+--------------+------------+------------+
+; 13.211 ; vga:vga1|vState[2]  ; vga:vga1|vSyncPulse ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.001      ; 11.830     ;
+; 13.678 ; vga:vga1|vState[0]  ; vga:vga1|vSyncPulse ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.001      ; 11.363     ;
+; 14.432 ; vga:vga1|vState[1]  ; vga:vga1|vSyncPulse ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.001      ; 10.609     ;
+; 15.474 ; vga:vga1|vState[6]  ; vga:vga1|vState[0]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 9.566      ;
+; 15.474 ; vga:vga1|vState[6]  ; vga:vga1|vState[1]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 9.566      ;
+; 15.474 ; vga:vga1|vState[6]  ; vga:vga1|vState[2]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 9.566      ;
+; 15.474 ; vga:vga1|vState[6]  ; vga:vga1|vState[3]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 9.566      ;
+; 15.474 ; vga:vga1|vState[6]  ; vga:vga1|vState[5]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 9.566      ;
+; 15.474 ; vga:vga1|vState[6]  ; vga:vga1|vState[6]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 9.566      ;
+; 15.474 ; vga:vga1|vState[6]  ; vga:vga1|vState[7]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 9.566      ;
+; 15.474 ; vga:vga1|vState[6]  ; vga:vga1|vState[8]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 9.566      ;
+; 15.474 ; vga:vga1|vState[6]  ; vga:vga1|vState[9]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 9.566      ;
+; 15.474 ; vga:vga1|vState[6]  ; vga:vga1|vState[10] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 9.566      ;
+; 15.474 ; vga:vga1|vState[6]  ; vga:vga1|vState[11] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 9.566      ;
+; 15.474 ; vga:vga1|vState[6]  ; vga:vga1|vState[12] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 9.566      ;
+; 15.474 ; vga:vga1|vState[6]  ; vga:vga1|vState[13] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 9.566      ;
+; 15.474 ; vga:vga1|vState[6]  ; vga:vga1|vState[14] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 9.566      ;
+; 15.474 ; vga:vga1|vState[6]  ; vga:vga1|vState[15] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 9.566      ;
+; 15.474 ; vga:vga1|vState[6]  ; vga:vga1|vState[4]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 9.566      ;
+; 16.284 ; vga:vga1|vState[5]  ; vga:vga1|vState[0]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 8.756      ;
+; 16.284 ; vga:vga1|vState[5]  ; vga:vga1|vState[1]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 8.756      ;
+; 16.284 ; vga:vga1|vState[5]  ; vga:vga1|vState[2]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 8.756      ;
+; 16.284 ; vga:vga1|vState[5]  ; vga:vga1|vState[3]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 8.756      ;
+; 16.284 ; vga:vga1|vState[5]  ; vga:vga1|vState[5]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 8.756      ;
+; 16.284 ; vga:vga1|vState[5]  ; vga:vga1|vState[6]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 8.756      ;
+; 16.284 ; vga:vga1|vState[5]  ; vga:vga1|vState[7]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 8.756      ;
+; 16.284 ; vga:vga1|vState[5]  ; vga:vga1|vState[8]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 8.756      ;
+; 16.284 ; vga:vga1|vState[5]  ; vga:vga1|vState[9]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 8.756      ;
+; 16.284 ; vga:vga1|vState[5]  ; vga:vga1|vState[10] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 8.756      ;
+; 16.284 ; vga:vga1|vState[5]  ; vga:vga1|vState[11] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 8.756      ;
+; 16.284 ; vga:vga1|vState[5]  ; vga:vga1|vState[12] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 8.756      ;
+; 16.284 ; vga:vga1|vState[5]  ; vga:vga1|vState[13] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 8.756      ;
+; 16.284 ; vga:vga1|vState[5]  ; vga:vga1|vState[14] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 8.756      ;
+; 16.284 ; vga:vga1|vState[5]  ; vga:vga1|vState[15] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 8.756      ;
+; 16.284 ; vga:vga1|vState[5]  ; vga:vga1|vState[4]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 8.756      ;
+; 19.087 ; vga:vga1|vState[3]  ; vga:vga1|vState[0]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 5.953      ;
+; 19.087 ; vga:vga1|vState[3]  ; vga:vga1|vState[1]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 5.953      ;
+; 19.087 ; vga:vga1|vState[3]  ; vga:vga1|vState[2]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 5.953      ;
+; 19.087 ; vga:vga1|vState[3]  ; vga:vga1|vState[3]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 5.953      ;
+; 19.087 ; vga:vga1|vState[3]  ; vga:vga1|vState[5]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 5.953      ;
+; 19.087 ; vga:vga1|vState[3]  ; vga:vga1|vState[6]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 5.953      ;
+; 19.087 ; vga:vga1|vState[3]  ; vga:vga1|vState[7]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 5.953      ;
+; 19.087 ; vga:vga1|vState[3]  ; vga:vga1|vState[8]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 5.953      ;
+; 19.087 ; vga:vga1|vState[3]  ; vga:vga1|vState[9]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 5.953      ;
+; 19.087 ; vga:vga1|vState[3]  ; vga:vga1|vState[10] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 5.953      ;
+; 19.087 ; vga:vga1|vState[3]  ; vga:vga1|vState[11] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 5.953      ;
+; 19.087 ; vga:vga1|vState[3]  ; vga:vga1|vState[12] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 5.953      ;
+; 19.087 ; vga:vga1|vState[3]  ; vga:vga1|vState[13] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 5.953      ;
+; 19.087 ; vga:vga1|vState[3]  ; vga:vga1|vState[14] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 5.953      ;
+; 19.087 ; vga:vga1|vState[3]  ; vga:vga1|vState[15] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 5.953      ;
+; 19.087 ; vga:vga1|vState[3]  ; vga:vga1|vState[4]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 5.953      ;
+; 19.267 ; vga:vga1|vState[3]  ; vga:vga1|vSyncPulse ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.001      ; 5.774      ;
+; 19.781 ; vga:vga1|hState[5]  ; vga:vga1|vState[0]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.019      ; 5.278      ;
+; 19.781 ; vga:vga1|hState[5]  ; vga:vga1|vState[1]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.019      ; 5.278      ;
+; 19.781 ; vga:vga1|hState[5]  ; vga:vga1|vState[2]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.019      ; 5.278      ;
+; 19.781 ; vga:vga1|hState[5]  ; vga:vga1|vState[3]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.019      ; 5.278      ;
+; 19.781 ; vga:vga1|hState[5]  ; vga:vga1|vState[5]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.019      ; 5.278      ;
+; 19.781 ; vga:vga1|hState[5]  ; vga:vga1|vState[6]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.019      ; 5.278      ;
+; 19.781 ; vga:vga1|hState[5]  ; vga:vga1|vState[7]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.019      ; 5.278      ;
+; 19.781 ; vga:vga1|hState[5]  ; vga:vga1|vState[8]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.019      ; 5.278      ;
+; 19.781 ; vga:vga1|hState[5]  ; vga:vga1|vState[9]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.019      ; 5.278      ;
+; 19.781 ; vga:vga1|hState[5]  ; vga:vga1|vState[10] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.019      ; 5.278      ;
+; 19.781 ; vga:vga1|hState[5]  ; vga:vga1|vState[11] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.019      ; 5.278      ;
+; 19.781 ; vga:vga1|hState[5]  ; vga:vga1|vState[12] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.019      ; 5.278      ;
+; 19.781 ; vga:vga1|hState[5]  ; vga:vga1|vState[13] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.019      ; 5.278      ;
+; 19.781 ; vga:vga1|hState[5]  ; vga:vga1|vState[14] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.019      ; 5.278      ;
+; 19.781 ; vga:vga1|hState[5]  ; vga:vga1|vState[15] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.019      ; 5.278      ;
+; 19.781 ; vga:vga1|hState[5]  ; vga:vga1|vState[4]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.019      ; 5.278      ;
+; 20.119 ; vga:vga1|hState[6]  ; vga:vga1|vState[0]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.019      ; 4.940      ;
+; 20.119 ; vga:vga1|hState[6]  ; vga:vga1|vState[1]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.019      ; 4.940      ;
+; 20.119 ; vga:vga1|hState[6]  ; vga:vga1|vState[2]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.019      ; 4.940      ;
+; 20.119 ; vga:vga1|hState[6]  ; vga:vga1|vState[3]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.019      ; 4.940      ;
+; 20.119 ; vga:vga1|hState[6]  ; vga:vga1|vState[5]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.019      ; 4.940      ;
+; 20.119 ; vga:vga1|hState[6]  ; vga:vga1|vState[6]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.019      ; 4.940      ;
+; 20.119 ; vga:vga1|hState[6]  ; vga:vga1|vState[7]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.019      ; 4.940      ;
+; 20.119 ; vga:vga1|hState[6]  ; vga:vga1|vState[8]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.019      ; 4.940      ;
+; 20.119 ; vga:vga1|hState[6]  ; vga:vga1|vState[9]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.019      ; 4.940      ;
+; 20.119 ; vga:vga1|hState[6]  ; vga:vga1|vState[10] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.019      ; 4.940      ;
+; 20.119 ; vga:vga1|hState[6]  ; vga:vga1|vState[11] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.019      ; 4.940      ;
+; 20.119 ; vga:vga1|hState[6]  ; vga:vga1|vState[12] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.019      ; 4.940      ;
+; 20.119 ; vga:vga1|hState[6]  ; vga:vga1|vState[13] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.019      ; 4.940      ;
+; 20.119 ; vga:vga1|hState[6]  ; vga:vga1|vState[14] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.019      ; 4.940      ;
+; 20.119 ; vga:vga1|hState[6]  ; vga:vga1|vState[15] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.019      ; 4.940      ;
+; 20.119 ; vga:vga1|hState[6]  ; vga:vga1|vState[4]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.019      ; 4.940      ;
+; 20.149 ; vga:vga1|vState[11] ; vga:vga1|vState[0]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 4.891      ;
+; 20.149 ; vga:vga1|vState[11] ; vga:vga1|vState[1]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 4.891      ;
+; 20.149 ; vga:vga1|vState[11] ; vga:vga1|vState[2]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 4.891      ;
+; 20.149 ; vga:vga1|vState[11] ; vga:vga1|vState[3]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 4.891      ;
+; 20.149 ; vga:vga1|vState[11] ; vga:vga1|vState[5]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 4.891      ;
+; 20.149 ; vga:vga1|vState[11] ; vga:vga1|vState[6]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 4.891      ;
+; 20.149 ; vga:vga1|vState[11] ; vga:vga1|vState[7]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 4.891      ;
+; 20.149 ; vga:vga1|vState[11] ; vga:vga1|vState[8]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 4.891      ;
+; 20.149 ; vga:vga1|vState[11] ; vga:vga1|vState[9]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 4.891      ;
+; 20.149 ; vga:vga1|vState[11] ; vga:vga1|vState[10] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 4.891      ;
+; 20.149 ; vga:vga1|vState[11] ; vga:vga1|vState[11] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 4.891      ;
+; 20.149 ; vga:vga1|vState[11] ; vga:vga1|vState[12] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 4.891      ;
+; 20.149 ; vga:vga1|vState[11] ; vga:vga1|vState[13] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 4.891      ;
+; 20.149 ; vga:vga1|vState[11] ; vga:vga1|vState[14] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 4.891      ;
+; 20.149 ; vga:vga1|vState[11] ; vga:vga1|vState[15] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 4.891      ;
+; 20.149 ; vga:vga1|vState[11] ; vga:vga1|vState[4]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 4.891      ;
++--------+---------------------+---------------------+----------------------------------+----------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'pll1|altpll_component|pll|clk[0]'                                                                                                              ;
++-------+---------------------+---------------------+----------------------------------+----------------------------------+--------------+------------+------------+
+; Slack ; From Node           ; To Node             ; Launch Clock                     ; Latch Clock                      ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------+---------------------+----------------------------------+----------------------------------+--------------+------------+------------+
+; 0.753 ; vga:vga1|hState[15] ; vga:vga1|hState[15] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.059      ;
+; 0.753 ; vga:vga1|vState[15] ; vga:vga1|vState[15] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.059      ;
+; 1.167 ; vga:vga1|hState[0]  ; vga:vga1|hState[0]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.473      ;
+; 1.167 ; vga:vga1|vState[0]  ; vga:vga1|vState[0]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.473      ;
+; 1.175 ; vga:vga1|hState[1]  ; vga:vga1|hState[1]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.481      ;
+; 1.175 ; vga:vga1|vState[1]  ; vga:vga1|vState[1]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.481      ;
+; 1.176 ; vga:vga1|hState[2]  ; vga:vga1|hState[2]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.482      ;
+; 1.176 ; vga:vga1|vState[2]  ; vga:vga1|vState[2]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.482      ;
+; 1.177 ; vga:vga1|hState[4]  ; vga:vga1|hState[4]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.483      ;
+; 1.177 ; vga:vga1|hState[7]  ; vga:vga1|hState[7]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.483      ;
+; 1.177 ; vga:vga1|hState[11] ; vga:vga1|hState[11] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.483      ;
+; 1.177 ; vga:vga1|hState[13] ; vga:vga1|hState[13] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.483      ;
+; 1.177 ; vga:vga1|hState[14] ; vga:vga1|hState[14] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.483      ;
+; 1.177 ; vga:vga1|vState[7]  ; vga:vga1|vState[7]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.483      ;
+; 1.177 ; vga:vga1|vState[11] ; vga:vga1|vState[11] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.483      ;
+; 1.177 ; vga:vga1|vState[13] ; vga:vga1|vState[13] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.483      ;
+; 1.177 ; vga:vga1|vState[14] ; vga:vga1|vState[14] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.483      ;
+; 1.177 ; vga:vga1|vState[4]  ; vga:vga1|vState[4]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.483      ;
+; 1.185 ; vga:vga1|hState[9]  ; vga:vga1|hState[9]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.491      ;
+; 1.185 ; vga:vga1|vState[9]  ; vga:vga1|vState[9]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.491      ;
+; 1.225 ; vga:vga1|hState[3]  ; vga:vga1|hState[3]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.531      ;
+; 1.225 ; vga:vga1|hState[8]  ; vga:vga1|hState[8]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.531      ;
+; 1.225 ; vga:vga1|hState[10] ; vga:vga1|hState[10] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.531      ;
+; 1.225 ; vga:vga1|vState[3]  ; vga:vga1|vState[3]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.531      ;
+; 1.225 ; vga:vga1|vState[8]  ; vga:vga1|vState[8]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.531      ;
+; 1.225 ; vga:vga1|vState[10] ; vga:vga1|vState[10] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.531      ;
+; 1.226 ; vga:vga1|hState[5]  ; vga:vga1|hState[5]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.532      ;
+; 1.226 ; vga:vga1|hState[6]  ; vga:vga1|hState[6]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.532      ;
+; 1.226 ; vga:vga1|hState[12] ; vga:vga1|hState[12] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.532      ;
+; 1.226 ; vga:vga1|vState[6]  ; vga:vga1|vState[6]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.532      ;
+; 1.226 ; vga:vga1|vState[12] ; vga:vga1|vState[12] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.532      ;
+; 1.235 ; vga:vga1|vState[5]  ; vga:vga1|vState[5]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.541      ;
+; 1.250 ; vga:vga1|hState[10] ; vga:vga1|hSyncPulse ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.001      ; 1.557      ;
+; 1.298 ; vga:vga1|vState[15] ; vga:vga1|vSyncPulse ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.001      ; 1.605      ;
+; 1.301 ; vga:vga1|hState[15] ; vga:vga1|hSyncPulse ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.001      ; 1.608      ;
+; 1.510 ; vga:vga1|vState[9]  ; vga:vga1|vSyncPulse ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.001      ; 1.817      ;
+; 1.645 ; vga:vga1|hState[0]  ; vga:vga1|hState[1]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.951      ;
+; 1.645 ; vga:vga1|vState[0]  ; vga:vga1|vState[1]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.951      ;
+; 1.654 ; vga:vga1|hState[1]  ; vga:vga1|hState[2]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.960      ;
+; 1.654 ; vga:vga1|vState[1]  ; vga:vga1|vState[2]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.960      ;
+; 1.655 ; vga:vga1|hState[2]  ; vga:vga1|hState[3]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.961      ;
+; 1.655 ; vga:vga1|vState[2]  ; vga:vga1|vState[3]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.961      ;
+; 1.656 ; vga:vga1|hState[14] ; vga:vga1|hState[15] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.962      ;
+; 1.656 ; vga:vga1|vState[14] ; vga:vga1|vState[15] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.962      ;
+; 1.656 ; vga:vga1|hState[13] ; vga:vga1|hState[14] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.962      ;
+; 1.656 ; vga:vga1|vState[13] ; vga:vga1|vState[14] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.962      ;
+; 1.656 ; vga:vga1|hState[4]  ; vga:vga1|hState[5]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.962      ;
+; 1.656 ; vga:vga1|hState[11] ; vga:vga1|hState[12] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.962      ;
+; 1.656 ; vga:vga1|vState[11] ; vga:vga1|vState[12] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.962      ;
+; 1.656 ; vga:vga1|vState[4]  ; vga:vga1|vState[5]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.962      ;
+; 1.664 ; vga:vga1|hState[9]  ; vga:vga1|hState[10] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.970      ;
+; 1.664 ; vga:vga1|vState[9]  ; vga:vga1|vState[10] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.970      ;
+; 1.685 ; vga:vga1|vState[4]  ; vga:vga1|vSyncPulse ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.001      ; 1.992      ;
+; 1.701 ; vga:vga1|hState[6]  ; vga:vga1|hSyncPulse ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.001      ; 2.008      ;
+; 1.705 ; vga:vga1|hState[3]  ; vga:vga1|hState[4]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.011      ;
+; 1.705 ; vga:vga1|hState[10] ; vga:vga1|hState[11] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.011      ;
+; 1.705 ; vga:vga1|vState[10] ; vga:vga1|vState[11] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.011      ;
+; 1.705 ; vga:vga1|vState[3]  ; vga:vga1|vState[4]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.011      ;
+; 1.705 ; vga:vga1|hState[8]  ; vga:vga1|hState[9]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.011      ;
+; 1.705 ; vga:vga1|vState[8]  ; vga:vga1|vState[9]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.011      ;
+; 1.706 ; vga:vga1|hState[6]  ; vga:vga1|hState[7]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.012      ;
+; 1.706 ; vga:vga1|hState[12] ; vga:vga1|hState[13] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.012      ;
+; 1.706 ; vga:vga1|vState[6]  ; vga:vga1|vState[7]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.012      ;
+; 1.706 ; vga:vga1|vState[12] ; vga:vga1|vState[13] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.012      ;
+; 1.706 ; vga:vga1|hState[5]  ; vga:vga1|hState[6]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.012      ;
+; 1.715 ; vga:vga1|vState[5]  ; vga:vga1|vState[6]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.021      ;
+; 1.731 ; vga:vga1|hState[0]  ; vga:vga1|hState[2]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.037      ;
+; 1.731 ; vga:vga1|vState[0]  ; vga:vga1|vState[2]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.037      ;
+; 1.740 ; vga:vga1|hState[1]  ; vga:vga1|hState[3]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.046      ;
+; 1.740 ; vga:vga1|vState[1]  ; vga:vga1|vState[3]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.046      ;
+; 1.741 ; vga:vga1|hState[2]  ; vga:vga1|hState[4]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.047      ;
+; 1.741 ; vga:vga1|vState[2]  ; vga:vga1|vState[4]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.047      ;
+; 1.742 ; vga:vga1|hState[13] ; vga:vga1|hState[15] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.048      ;
+; 1.742 ; vga:vga1|vState[13] ; vga:vga1|vState[15] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.048      ;
+; 1.742 ; vga:vga1|hState[11] ; vga:vga1|hState[13] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.048      ;
+; 1.742 ; vga:vga1|vState[11] ; vga:vga1|vState[13] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.048      ;
+; 1.742 ; vga:vga1|hState[4]  ; vga:vga1|hState[6]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.048      ;
+; 1.742 ; vga:vga1|vState[4]  ; vga:vga1|vState[6]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.048      ;
+; 1.750 ; vga:vga1|hState[9]  ; vga:vga1|hState[11] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.056      ;
+; 1.750 ; vga:vga1|vState[9]  ; vga:vga1|vState[11] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.056      ;
+; 1.766 ; vga:vga1|hState[7]  ; vga:vga1|hState[8]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.072      ;
+; 1.766 ; vga:vga1|vState[7]  ; vga:vga1|vState[8]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.072      ;
+; 1.791 ; vga:vga1|hState[3]  ; vga:vga1|hState[5]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.097      ;
+; 1.791 ; vga:vga1|hState[10] ; vga:vga1|hState[12] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.097      ;
+; 1.791 ; vga:vga1|vState[10] ; vga:vga1|vState[12] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.097      ;
+; 1.791 ; vga:vga1|vState[3]  ; vga:vga1|vState[5]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.097      ;
+; 1.791 ; vga:vga1|hState[8]  ; vga:vga1|hState[10] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.097      ;
+; 1.791 ; vga:vga1|vState[8]  ; vga:vga1|vState[10] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.097      ;
+; 1.792 ; vga:vga1|hState[12] ; vga:vga1|hState[14] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.098      ;
+; 1.792 ; vga:vga1|vState[12] ; vga:vga1|vState[14] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.098      ;
+; 1.792 ; vga:vga1|hState[5]  ; vga:vga1|hState[7]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.098      ;
+; 1.801 ; vga:vga1|vState[5]  ; vga:vga1|vState[7]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.107      ;
+; 1.817 ; vga:vga1|hState[0]  ; vga:vga1|hState[3]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.123      ;
+; 1.817 ; vga:vga1|vState[0]  ; vga:vga1|vState[3]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.123      ;
+; 1.826 ; vga:vga1|hState[1]  ; vga:vga1|hState[4]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.132      ;
+; 1.826 ; vga:vga1|vState[1]  ; vga:vga1|vState[4]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.132      ;
+; 1.827 ; vga:vga1|hState[2]  ; vga:vga1|hState[5]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.133      ;
+; 1.827 ; vga:vga1|vState[2]  ; vga:vga1|vState[5]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.133      ;
+; 1.828 ; vga:vga1|hState[11] ; vga:vga1|hState[14] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.134      ;
+; 1.828 ; vga:vga1|vState[11] ; vga:vga1|vState[14] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.134      ;
++-------+---------------------+---------------------+----------------------------------+----------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                               ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                             ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                        ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                        ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pll1|altpll_component|pll|clk[0]   ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pll1|altpll_component|pll|clk[0]   ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pll1|altpll_component|pll|inclk[0] ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pll1|altpll_component|pll|inclk[0] ;
+; 17.059 ; 20.000       ; 2.941          ; Port Rate        ; clk   ; Rise       ; clk                                ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'pll1|altpll_component|pll|clk[0]'                                                                                       ;
++--------+--------------+----------------+------------------+----------------------------------+------------+----------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                            ; Clock Edge ; Target                                       ;
++--------+--------------+----------------+------------------+----------------------------------+------------+----------------------------------------------+
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[0]                           ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[0]                           ;
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[10]                          ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[10]                          ;
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[11]                          ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[11]                          ;
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[12]                          ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[12]                          ;
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[13]                          ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[13]                          ;
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[14]                          ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[14]                          ;
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[15]                          ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[15]                          ;
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[1]                           ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[1]                           ;
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[2]                           ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[2]                           ;
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[3]                           ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[3]                           ;
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[4]                           ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[4]                           ;
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[5]                           ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[5]                           ;
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[6]                           ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[6]                           ;
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[7]                           ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[7]                           ;
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[8]                           ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[8]                           ;
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[9]                           ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[9]                           ;
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hSyncPulse                          ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hSyncPulse                          ;
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[0]                           ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[0]                           ;
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[10]                          ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[10]                          ;
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[11]                          ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[11]                          ;
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[12]                          ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[12]                          ;
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[13]                          ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[13]                          ;
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[14]                          ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[14]                          ;
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[15]                          ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[15]                          ;
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[1]                           ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[1]                           ;
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[2]                           ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[2]                           ;
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[3]                           ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[3]                           ;
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[4]                           ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[4]                           ;
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[5]                           ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[5]                           ;
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[6]                           ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[6]                           ;
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[7]                           ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[7]                           ;
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[8]                           ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[8]                           ;
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[9]                           ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[9]                           ;
+; 11.258 ; 12.500       ; 1.242          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vSyncPulse                          ;
+; 11.258 ; 12.500       ; 1.242          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vSyncPulse                          ;
+; 12.500 ; 12.500       ; 0.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; pll1|altpll_component|_clk0~clkctrl|inclk[0] ;
+; 12.500 ; 12.500       ; 0.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; pll1|altpll_component|_clk0~clkctrl|inclk[0] ;
+; 12.500 ; 12.500       ; 0.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; pll1|altpll_component|_clk0~clkctrl|outclk   ;
+; 12.500 ; 12.500       ; 0.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; pll1|altpll_component|_clk0~clkctrl|outclk   ;
+; 12.500 ; 12.500       ; 0.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[0]|clk                           ;
+; 12.500 ; 12.500       ; 0.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[0]|clk                           ;
+; 12.500 ; 12.500       ; 0.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[10]|clk                          ;
+; 12.500 ; 12.500       ; 0.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[10]|clk                          ;
+; 12.500 ; 12.500       ; 0.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[11]|clk                          ;
+; 12.500 ; 12.500       ; 0.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[11]|clk                          ;
+; 12.500 ; 12.500       ; 0.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[12]|clk                          ;
+; 12.500 ; 12.500       ; 0.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[12]|clk                          ;
+; 12.500 ; 12.500       ; 0.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[13]|clk                          ;
+; 12.500 ; 12.500       ; 0.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[13]|clk                          ;
+; 12.500 ; 12.500       ; 0.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[14]|clk                          ;
+; 12.500 ; 12.500       ; 0.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[14]|clk                          ;
+; 12.500 ; 12.500       ; 0.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[15]|clk                          ;
+; 12.500 ; 12.500       ; 0.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[15]|clk                          ;
+; 12.500 ; 12.500       ; 0.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[1]|clk                           ;
+; 12.500 ; 12.500       ; 0.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[1]|clk                           ;
+; 12.500 ; 12.500       ; 0.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[2]|clk                           ;
+; 12.500 ; 12.500       ; 0.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[2]|clk                           ;
+; 12.500 ; 12.500       ; 0.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[3]|clk                           ;
+; 12.500 ; 12.500       ; 0.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[3]|clk                           ;
+; 12.500 ; 12.500       ; 0.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[4]|clk                           ;
+; 12.500 ; 12.500       ; 0.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[4]|clk                           ;
+; 12.500 ; 12.500       ; 0.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[5]|clk                           ;
+; 12.500 ; 12.500       ; 0.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[5]|clk                           ;
+; 12.500 ; 12.500       ; 0.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[6]|clk                           ;
+; 12.500 ; 12.500       ; 0.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[6]|clk                           ;
+; 12.500 ; 12.500       ; 0.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[7]|clk                           ;
+; 12.500 ; 12.500       ; 0.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[7]|clk                           ;
++--------+--------------+----------------+------------------+----------------------------------+------------+----------------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                    ;
++-----------+------------+--------+--------+------------+----------------------------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference                  ;
++-----------+------------+--------+--------+------------+----------------------------------+
+; b         ; clk        ; 39.383 ; 39.383 ; Rise       ; pll1|altpll_component|pll|clk[0] ;
+; g         ; clk        ; 39.393 ; 39.393 ; Rise       ; pll1|altpll_component|pll|clk[0] ;
+; hSync     ; clk        ; 5.440  ; 5.440  ; Rise       ; pll1|altpll_component|pll|clk[0] ;
+; r         ; clk        ; 39.805 ; 39.805 ; Rise       ; pll1|altpll_component|pll|clk[0] ;
+; vSync     ; clk        ; 5.472  ; 5.472  ; Rise       ; pll1|altpll_component|pll|clk[0] ;
++-----------+------------+--------+--------+------------+----------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                            ;
++-----------+------------+--------+--------+------------+----------------------------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference                  ;
++-----------+------------+--------+--------+------------+----------------------------------+
+; b         ; clk        ; 10.560 ; 10.560 ; Rise       ; pll1|altpll_component|pll|clk[0] ;
+; g         ; clk        ; 10.570 ; 10.570 ; Rise       ; pll1|altpll_component|pll|clk[0] ;
+; hSync     ; clk        ; 5.440  ; 5.440  ; Rise       ; pll1|altpll_component|pll|clk[0] ;
+; r         ; clk        ; 10.982 ; 10.982 ; Rise       ; pll1|altpll_component|pll|clk[0] ;
+; vSync     ; clk        ; 5.472  ; 5.472  ; Rise       ; pll1|altpll_component|pll|clk[0] ;
++-----------+------------+--------+--------+------------+----------------------------------+
+
+
++-----------------------------------------------------------+
+; Fast Model Setup Summary                                  ;
++----------------------------------+--------+---------------+
+; Clock                            ; Slack  ; End Point TNS ;
++----------------------------------+--------+---------------+
+; pll1|altpll_component|pll|clk[0] ; 20.998 ; 0.000         ;
++----------------------------------+--------+---------------+
+
+
++----------------------------------------------------------+
+; Fast Model Hold Summary                                  ;
++----------------------------------+-------+---------------+
+; Clock                            ; Slack ; End Point TNS ;
++----------------------------------+-------+---------------+
+; pll1|altpll_component|pll|clk[0] ; 0.243 ; 0.000         ;
++----------------------------------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++-----------------------------------------------------------+
+; Fast Model Minimum Pulse Width Summary                    ;
++----------------------------------+--------+---------------+
+; Clock                            ; Slack  ; End Point TNS ;
++----------------------------------+--------+---------------+
+; clk                              ; 10.000 ; 0.000         ;
+; pll1|altpll_component|pll|clk[0] ; 11.500 ; 0.000         ;
++----------------------------------+--------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'pll1|altpll_component|pll|clk[0]'                                                                                                              ;
++--------+---------------------+---------------------+----------------------------------+----------------------------------+--------------+------------+------------+
+; Slack  ; From Node           ; To Node             ; Launch Clock                     ; Latch Clock                      ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------+---------------------+----------------------------------+----------------------------------+--------------+------------+------------+
+; 20.998 ; vga:vga1|vState[2]  ; vga:vga1|vSyncPulse ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.002      ; 4.036      ;
+; 21.238 ; vga:vga1|vState[0]  ; vga:vga1|vSyncPulse ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.002      ; 3.796      ;
+; 21.510 ; vga:vga1|vState[1]  ; vga:vga1|vSyncPulse ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.002      ; 3.524      ;
+; 21.924 ; vga:vga1|vState[6]  ; vga:vga1|vState[0]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 3.108      ;
+; 21.924 ; vga:vga1|vState[6]  ; vga:vga1|vState[1]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 3.108      ;
+; 21.924 ; vga:vga1|vState[6]  ; vga:vga1|vState[2]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 3.108      ;
+; 21.924 ; vga:vga1|vState[6]  ; vga:vga1|vState[3]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 3.108      ;
+; 21.924 ; vga:vga1|vState[6]  ; vga:vga1|vState[5]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 3.108      ;
+; 21.924 ; vga:vga1|vState[6]  ; vga:vga1|vState[6]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 3.108      ;
+; 21.924 ; vga:vga1|vState[6]  ; vga:vga1|vState[7]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 3.108      ;
+; 21.924 ; vga:vga1|vState[6]  ; vga:vga1|vState[8]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 3.108      ;
+; 21.924 ; vga:vga1|vState[6]  ; vga:vga1|vState[9]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 3.108      ;
+; 21.924 ; vga:vga1|vState[6]  ; vga:vga1|vState[10] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 3.108      ;
+; 21.924 ; vga:vga1|vState[6]  ; vga:vga1|vState[11] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 3.108      ;
+; 21.924 ; vga:vga1|vState[6]  ; vga:vga1|vState[12] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 3.108      ;
+; 21.924 ; vga:vga1|vState[6]  ; vga:vga1|vState[13] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 3.108      ;
+; 21.924 ; vga:vga1|vState[6]  ; vga:vga1|vState[14] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 3.108      ;
+; 21.924 ; vga:vga1|vState[6]  ; vga:vga1|vState[15] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 3.108      ;
+; 21.924 ; vga:vga1|vState[6]  ; vga:vga1|vState[4]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 3.108      ;
+; 22.165 ; vga:vga1|vState[5]  ; vga:vga1|vState[0]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 2.867      ;
+; 22.165 ; vga:vga1|vState[5]  ; vga:vga1|vState[1]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 2.867      ;
+; 22.165 ; vga:vga1|vState[5]  ; vga:vga1|vState[2]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 2.867      ;
+; 22.165 ; vga:vga1|vState[5]  ; vga:vga1|vState[3]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 2.867      ;
+; 22.165 ; vga:vga1|vState[5]  ; vga:vga1|vState[5]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 2.867      ;
+; 22.165 ; vga:vga1|vState[5]  ; vga:vga1|vState[6]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 2.867      ;
+; 22.165 ; vga:vga1|vState[5]  ; vga:vga1|vState[7]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 2.867      ;
+; 22.165 ; vga:vga1|vState[5]  ; vga:vga1|vState[8]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 2.867      ;
+; 22.165 ; vga:vga1|vState[5]  ; vga:vga1|vState[9]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 2.867      ;
+; 22.165 ; vga:vga1|vState[5]  ; vga:vga1|vState[10] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 2.867      ;
+; 22.165 ; vga:vga1|vState[5]  ; vga:vga1|vState[11] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 2.867      ;
+; 22.165 ; vga:vga1|vState[5]  ; vga:vga1|vState[12] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 2.867      ;
+; 22.165 ; vga:vga1|vState[5]  ; vga:vga1|vState[13] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 2.867      ;
+; 22.165 ; vga:vga1|vState[5]  ; vga:vga1|vState[14] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 2.867      ;
+; 22.165 ; vga:vga1|vState[5]  ; vga:vga1|vState[15] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 2.867      ;
+; 22.165 ; vga:vga1|vState[5]  ; vga:vga1|vState[4]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 2.867      ;
+; 23.059 ; vga:vga1|vState[3]  ; vga:vga1|vSyncPulse ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.002      ; 1.975      ;
+; 23.071 ; vga:vga1|vState[3]  ; vga:vga1|vState[0]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 1.961      ;
+; 23.071 ; vga:vga1|vState[3]  ; vga:vga1|vState[1]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 1.961      ;
+; 23.071 ; vga:vga1|vState[3]  ; vga:vga1|vState[2]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 1.961      ;
+; 23.071 ; vga:vga1|vState[3]  ; vga:vga1|vState[3]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 1.961      ;
+; 23.071 ; vga:vga1|vState[3]  ; vga:vga1|vState[5]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 1.961      ;
+; 23.071 ; vga:vga1|vState[3]  ; vga:vga1|vState[6]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 1.961      ;
+; 23.071 ; vga:vga1|vState[3]  ; vga:vga1|vState[7]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 1.961      ;
+; 23.071 ; vga:vga1|vState[3]  ; vga:vga1|vState[8]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 1.961      ;
+; 23.071 ; vga:vga1|vState[3]  ; vga:vga1|vState[9]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 1.961      ;
+; 23.071 ; vga:vga1|vState[3]  ; vga:vga1|vState[10] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 1.961      ;
+; 23.071 ; vga:vga1|vState[3]  ; vga:vga1|vState[11] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 1.961      ;
+; 23.071 ; vga:vga1|vState[3]  ; vga:vga1|vState[12] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 1.961      ;
+; 23.071 ; vga:vga1|vState[3]  ; vga:vga1|vState[13] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 1.961      ;
+; 23.071 ; vga:vga1|vState[3]  ; vga:vga1|vState[14] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 1.961      ;
+; 23.071 ; vga:vga1|vState[3]  ; vga:vga1|vState[15] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 1.961      ;
+; 23.071 ; vga:vga1|vState[3]  ; vga:vga1|vState[4]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 1.961      ;
+; 23.250 ; vga:vga1|hState[5]  ; vga:vga1|vState[0]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.020      ; 1.802      ;
+; 23.250 ; vga:vga1|hState[5]  ; vga:vga1|vState[1]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.020      ; 1.802      ;
+; 23.250 ; vga:vga1|hState[5]  ; vga:vga1|vState[2]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.020      ; 1.802      ;
+; 23.250 ; vga:vga1|hState[5]  ; vga:vga1|vState[3]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.020      ; 1.802      ;
+; 23.250 ; vga:vga1|hState[5]  ; vga:vga1|vState[5]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.020      ; 1.802      ;
+; 23.250 ; vga:vga1|hState[5]  ; vga:vga1|vState[6]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.020      ; 1.802      ;
+; 23.250 ; vga:vga1|hState[5]  ; vga:vga1|vState[7]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.020      ; 1.802      ;
+; 23.250 ; vga:vga1|hState[5]  ; vga:vga1|vState[8]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.020      ; 1.802      ;
+; 23.250 ; vga:vga1|hState[5]  ; vga:vga1|vState[9]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.020      ; 1.802      ;
+; 23.250 ; vga:vga1|hState[5]  ; vga:vga1|vState[10] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.020      ; 1.802      ;
+; 23.250 ; vga:vga1|hState[5]  ; vga:vga1|vState[11] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.020      ; 1.802      ;
+; 23.250 ; vga:vga1|hState[5]  ; vga:vga1|vState[12] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.020      ; 1.802      ;
+; 23.250 ; vga:vga1|hState[5]  ; vga:vga1|vState[13] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.020      ; 1.802      ;
+; 23.250 ; vga:vga1|hState[5]  ; vga:vga1|vState[14] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.020      ; 1.802      ;
+; 23.250 ; vga:vga1|hState[5]  ; vga:vga1|vState[15] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.020      ; 1.802      ;
+; 23.250 ; vga:vga1|hState[5]  ; vga:vga1|vState[4]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.020      ; 1.802      ;
+; 23.371 ; vga:vga1|hState[6]  ; vga:vga1|vState[0]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.020      ; 1.681      ;
+; 23.371 ; vga:vga1|hState[6]  ; vga:vga1|vState[1]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.020      ; 1.681      ;
+; 23.371 ; vga:vga1|hState[6]  ; vga:vga1|vState[2]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.020      ; 1.681      ;
+; 23.371 ; vga:vga1|hState[6]  ; vga:vga1|vState[3]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.020      ; 1.681      ;
+; 23.371 ; vga:vga1|hState[6]  ; vga:vga1|vState[5]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.020      ; 1.681      ;
+; 23.371 ; vga:vga1|hState[6]  ; vga:vga1|vState[6]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.020      ; 1.681      ;
+; 23.371 ; vga:vga1|hState[6]  ; vga:vga1|vState[7]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.020      ; 1.681      ;
+; 23.371 ; vga:vga1|hState[6]  ; vga:vga1|vState[8]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.020      ; 1.681      ;
+; 23.371 ; vga:vga1|hState[6]  ; vga:vga1|vState[9]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.020      ; 1.681      ;
+; 23.371 ; vga:vga1|hState[6]  ; vga:vga1|vState[10] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.020      ; 1.681      ;
+; 23.371 ; vga:vga1|hState[6]  ; vga:vga1|vState[11] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.020      ; 1.681      ;
+; 23.371 ; vga:vga1|hState[6]  ; vga:vga1|vState[12] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.020      ; 1.681      ;
+; 23.371 ; vga:vga1|hState[6]  ; vga:vga1|vState[13] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.020      ; 1.681      ;
+; 23.371 ; vga:vga1|hState[6]  ; vga:vga1|vState[14] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.020      ; 1.681      ;
+; 23.371 ; vga:vga1|hState[6]  ; vga:vga1|vState[15] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.020      ; 1.681      ;
+; 23.371 ; vga:vga1|hState[6]  ; vga:vga1|vState[4]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.020      ; 1.681      ;
+; 23.374 ; vga:vga1|hState[5]  ; vga:vga1|hSyncPulse ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.002      ; 1.660      ;
+; 23.406 ; vga:vga1|vState[13] ; vga:vga1|vSyncPulse ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.002      ; 1.628      ;
+; 23.406 ; vga:vga1|hState[11] ; vga:vga1|hSyncPulse ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.002      ; 1.628      ;
+; 23.407 ; vga:vga1|vState[11] ; vga:vga1|vSyncPulse ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.002      ; 1.627      ;
+; 23.413 ; vga:vga1|vState[13] ; vga:vga1|vState[0]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 1.619      ;
+; 23.413 ; vga:vga1|vState[13] ; vga:vga1|vState[1]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 1.619      ;
+; 23.413 ; vga:vga1|vState[13] ; vga:vga1|vState[2]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 1.619      ;
+; 23.413 ; vga:vga1|vState[13] ; vga:vga1|vState[3]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 1.619      ;
+; 23.413 ; vga:vga1|vState[13] ; vga:vga1|vState[5]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 1.619      ;
+; 23.413 ; vga:vga1|vState[13] ; vga:vga1|vState[6]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 1.619      ;
+; 23.413 ; vga:vga1|vState[13] ; vga:vga1|vState[7]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 1.619      ;
+; 23.413 ; vga:vga1|vState[13] ; vga:vga1|vState[8]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 1.619      ;
+; 23.413 ; vga:vga1|vState[13] ; vga:vga1|vState[9]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 1.619      ;
+; 23.413 ; vga:vga1|vState[13] ; vga:vga1|vState[10] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 1.619      ;
+; 23.413 ; vga:vga1|vState[13] ; vga:vga1|vState[11] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 1.619      ;
+; 23.413 ; vga:vga1|vState[13] ; vga:vga1|vState[12] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 25.000       ; 0.000      ; 1.619      ;
++--------+---------------------+---------------------+----------------------------------+----------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'pll1|altpll_component|pll|clk[0]'                                                                                                              ;
++-------+---------------------+---------------------+----------------------------------+----------------------------------+--------------+------------+------------+
+; Slack ; From Node           ; To Node             ; Launch Clock                     ; Latch Clock                      ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------+---------------------+----------------------------------+----------------------------------+--------------+------------+------------+
+; 0.243 ; vga:vga1|hState[15] ; vga:vga1|hState[15] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.395      ;
+; 0.243 ; vga:vga1|vState[15] ; vga:vga1|vState[15] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.395      ;
+; 0.355 ; vga:vga1|hState[0]  ; vga:vga1|hState[0]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.507      ;
+; 0.355 ; vga:vga1|vState[0]  ; vga:vga1|vState[0]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.507      ;
+; 0.359 ; vga:vga1|hState[1]  ; vga:vga1|hState[1]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359 ; vga:vga1|vState[1]  ; vga:vga1|vState[1]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.511      ;
+; 0.360 ; vga:vga1|hState[2]  ; vga:vga1|hState[2]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; vga:vga1|hState[11] ; vga:vga1|hState[11] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; vga:vga1|vState[2]  ; vga:vga1|vState[2]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; vga:vga1|vState[11] ; vga:vga1|vState[11] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.512      ;
+; 0.361 ; vga:vga1|hState[4]  ; vga:vga1|hState[4]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; vga:vga1|hState[7]  ; vga:vga1|hState[7]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; vga:vga1|hState[13] ; vga:vga1|hState[13] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; vga:vga1|hState[14] ; vga:vga1|hState[14] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; vga:vga1|vState[7]  ; vga:vga1|vState[7]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; vga:vga1|vState[13] ; vga:vga1|vState[13] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; vga:vga1|vState[14] ; vga:vga1|vState[14] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; vga:vga1|vState[4]  ; vga:vga1|vState[4]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.513      ;
+; 0.363 ; vga:vga1|hState[9]  ; vga:vga1|hState[9]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; vga:vga1|vState[9]  ; vga:vga1|vState[9]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.515      ;
+; 0.371 ; vga:vga1|hState[3]  ; vga:vga1|hState[3]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; vga:vga1|hState[8]  ; vga:vga1|hState[8]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; vga:vga1|hState[10] ; vga:vga1|hState[10] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; vga:vga1|vState[3]  ; vga:vga1|vState[3]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; vga:vga1|vState[8]  ; vga:vga1|vState[8]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; vga:vga1|vState[10] ; vga:vga1|vState[10] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.523      ;
+; 0.372 ; vga:vga1|hState[5]  ; vga:vga1|hState[5]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; vga:vga1|hState[6]  ; vga:vga1|hState[6]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; vga:vga1|hState[12] ; vga:vga1|hState[12] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; vga:vga1|vState[6]  ; vga:vga1|vState[6]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; vga:vga1|vState[12] ; vga:vga1|vState[12] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.524      ;
+; 0.375 ; vga:vga1|vState[5]  ; vga:vga1|vState[5]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.527      ;
+; 0.384 ; vga:vga1|hState[10] ; vga:vga1|hSyncPulse ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.002      ; 0.538      ;
+; 0.477 ; vga:vga1|vState[9]  ; vga:vga1|vSyncPulse ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.002      ; 0.631      ;
+; 0.493 ; vga:vga1|hState[0]  ; vga:vga1|hState[1]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.645      ;
+; 0.493 ; vga:vga1|vState[0]  ; vga:vga1|vState[1]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.645      ;
+; 0.497 ; vga:vga1|hState[1]  ; vga:vga1|hState[2]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.649      ;
+; 0.497 ; vga:vga1|vState[1]  ; vga:vga1|vState[2]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.649      ;
+; 0.498 ; vga:vga1|hState[2]  ; vga:vga1|hState[3]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498 ; vga:vga1|vState[2]  ; vga:vga1|vState[3]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498 ; vga:vga1|hState[11] ; vga:vga1|hState[12] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498 ; vga:vga1|vState[11] ; vga:vga1|vState[12] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.650      ;
+; 0.499 ; vga:vga1|hState[14] ; vga:vga1|hState[15] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; vga:vga1|vState[14] ; vga:vga1|vState[15] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; vga:vga1|hState[13] ; vga:vga1|hState[14] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; vga:vga1|vState[13] ; vga:vga1|vState[14] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; vga:vga1|hState[4]  ; vga:vga1|hState[5]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; vga:vga1|vState[4]  ; vga:vga1|vState[5]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.651      ;
+; 0.501 ; vga:vga1|hState[9]  ; vga:vga1|hState[10] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.653      ;
+; 0.501 ; vga:vga1|vState[9]  ; vga:vga1|vState[10] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.653      ;
+; 0.510 ; vga:vga1|vState[15] ; vga:vga1|vSyncPulse ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.002      ; 0.664      ;
+; 0.511 ; vga:vga1|hState[10] ; vga:vga1|hState[11] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511 ; vga:vga1|vState[10] ; vga:vga1|vState[11] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511 ; vga:vga1|hState[3]  ; vga:vga1|hState[4]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511 ; vga:vga1|vState[3]  ; vga:vga1|vState[4]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511 ; vga:vga1|hState[8]  ; vga:vga1|hState[9]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511 ; vga:vga1|vState[8]  ; vga:vga1|vState[9]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.663      ;
+; 0.512 ; vga:vga1|hState[15] ; vga:vga1|hSyncPulse ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.002      ; 0.666      ;
+; 0.512 ; vga:vga1|hState[6]  ; vga:vga1|hState[7]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512 ; vga:vga1|hState[12] ; vga:vga1|hState[13] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512 ; vga:vga1|vState[6]  ; vga:vga1|vState[7]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512 ; vga:vga1|vState[12] ; vga:vga1|vState[13] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512 ; vga:vga1|hState[5]  ; vga:vga1|hState[6]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.664      ;
+; 0.515 ; vga:vga1|vState[5]  ; vga:vga1|vState[6]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.667      ;
+; 0.521 ; vga:vga1|vState[4]  ; vga:vga1|vSyncPulse ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.002      ; 0.675      ;
+; 0.528 ; vga:vga1|hState[0]  ; vga:vga1|hState[2]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.680      ;
+; 0.528 ; vga:vga1|vState[0]  ; vga:vga1|vState[2]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.680      ;
+; 0.532 ; vga:vga1|hState[1]  ; vga:vga1|hState[3]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.684      ;
+; 0.532 ; vga:vga1|vState[1]  ; vga:vga1|vState[3]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.684      ;
+; 0.533 ; vga:vga1|hState[2]  ; vga:vga1|hState[4]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.685      ;
+; 0.533 ; vga:vga1|vState[2]  ; vga:vga1|vState[4]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.685      ;
+; 0.533 ; vga:vga1|hState[11] ; vga:vga1|hState[13] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.685      ;
+; 0.533 ; vga:vga1|vState[11] ; vga:vga1|vState[13] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.685      ;
+; 0.534 ; vga:vga1|hState[13] ; vga:vga1|hState[15] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.686      ;
+; 0.534 ; vga:vga1|vState[13] ; vga:vga1|vState[15] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.686      ;
+; 0.534 ; vga:vga1|hState[4]  ; vga:vga1|hState[6]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.686      ;
+; 0.534 ; vga:vga1|vState[4]  ; vga:vga1|vState[6]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.686      ;
+; 0.536 ; vga:vga1|hState[9]  ; vga:vga1|hState[11] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.688      ;
+; 0.536 ; vga:vga1|vState[9]  ; vga:vga1|vState[11] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.688      ;
+; 0.546 ; vga:vga1|hState[10] ; vga:vga1|hState[12] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.698      ;
+; 0.546 ; vga:vga1|vState[10] ; vga:vga1|vState[12] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.698      ;
+; 0.546 ; vga:vga1|hState[3]  ; vga:vga1|hState[5]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.698      ;
+; 0.546 ; vga:vga1|vState[3]  ; vga:vga1|vState[5]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.698      ;
+; 0.546 ; vga:vga1|hState[8]  ; vga:vga1|hState[10] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.698      ;
+; 0.546 ; vga:vga1|vState[8]  ; vga:vga1|vState[10] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.698      ;
+; 0.547 ; vga:vga1|hState[12] ; vga:vga1|hState[14] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.699      ;
+; 0.547 ; vga:vga1|vState[12] ; vga:vga1|vState[14] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.699      ;
+; 0.547 ; vga:vga1|hState[5]  ; vga:vga1|hState[7]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.699      ;
+; 0.549 ; vga:vga1|hState[6]  ; vga:vga1|hSyncPulse ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.002      ; 0.703      ;
+; 0.550 ; vga:vga1|vState[5]  ; vga:vga1|vState[7]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.702      ;
+; 0.554 ; vga:vga1|hState[7]  ; vga:vga1|hState[8]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.706      ;
+; 0.554 ; vga:vga1|vState[7]  ; vga:vga1|vState[8]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.706      ;
+; 0.561 ; vga:vga1|vState[8]  ; vga:vga1|vSyncPulse ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.002      ; 0.715      ;
+; 0.563 ; vga:vga1|hState[0]  ; vga:vga1|hState[3]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.715      ;
+; 0.563 ; vga:vga1|vState[0]  ; vga:vga1|vState[3]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.715      ;
+; 0.567 ; vga:vga1|hState[1]  ; vga:vga1|hState[4]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.719      ;
+; 0.567 ; vga:vga1|vState[1]  ; vga:vga1|vState[4]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.719      ;
+; 0.568 ; vga:vga1|hState[2]  ; vga:vga1|hState[5]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.720      ;
+; 0.568 ; vga:vga1|vState[2]  ; vga:vga1|vState[5]  ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.720      ;
+; 0.568 ; vga:vga1|hState[11] ; vga:vga1|hState[14] ; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.720      ;
++-------+---------------------+---------------------+----------------------------------+----------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                               ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                             ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                        ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                        ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pll1|altpll_component|pll|clk[0]   ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pll1|altpll_component|pll|clk[0]   ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pll1|altpll_component|pll|inclk[0] ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pll1|altpll_component|pll|inclk[0] ;
+; 17.620 ; 20.000       ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                                ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'pll1|altpll_component|pll|clk[0]'                                                                                       ;
++--------+--------------+----------------+------------------+----------------------------------+------------+----------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                            ; Clock Edge ; Target                                       ;
++--------+--------------+----------------+------------------+----------------------------------+------------+----------------------------------------------+
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[0]                           ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[0]                           ;
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[10]                          ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[10]                          ;
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[11]                          ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[11]                          ;
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[12]                          ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[12]                          ;
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[13]                          ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[13]                          ;
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[14]                          ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[14]                          ;
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[15]                          ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[15]                          ;
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[1]                           ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[1]                           ;
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[2]                           ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[2]                           ;
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[3]                           ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[3]                           ;
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[4]                           ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[4]                           ;
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[5]                           ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[5]                           ;
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[6]                           ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[6]                           ;
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[7]                           ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[7]                           ;
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[8]                           ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[8]                           ;
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[9]                           ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hState[9]                           ;
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hSyncPulse                          ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|hSyncPulse                          ;
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[0]                           ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[0]                           ;
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[10]                          ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[10]                          ;
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[11]                          ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[11]                          ;
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[12]                          ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[12]                          ;
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[13]                          ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[13]                          ;
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[14]                          ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[14]                          ;
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[15]                          ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[15]                          ;
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[1]                           ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[1]                           ;
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[2]                           ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[2]                           ;
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[3]                           ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[3]                           ;
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[4]                           ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[4]                           ;
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[5]                           ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[5]                           ;
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[6]                           ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[6]                           ;
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[7]                           ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[7]                           ;
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[8]                           ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[8]                           ;
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[9]                           ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vState[9]                           ;
+; 11.500 ; 12.500       ; 1.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vSyncPulse                          ;
+; 11.500 ; 12.500       ; 1.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga:vga1|vSyncPulse                          ;
+; 12.500 ; 12.500       ; 0.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; pll1|altpll_component|_clk0~clkctrl|inclk[0] ;
+; 12.500 ; 12.500       ; 0.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; pll1|altpll_component|_clk0~clkctrl|inclk[0] ;
+; 12.500 ; 12.500       ; 0.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; pll1|altpll_component|_clk0~clkctrl|outclk   ;
+; 12.500 ; 12.500       ; 0.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; pll1|altpll_component|_clk0~clkctrl|outclk   ;
+; 12.500 ; 12.500       ; 0.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[0]|clk                           ;
+; 12.500 ; 12.500       ; 0.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[0]|clk                           ;
+; 12.500 ; 12.500       ; 0.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[10]|clk                          ;
+; 12.500 ; 12.500       ; 0.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[10]|clk                          ;
+; 12.500 ; 12.500       ; 0.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[11]|clk                          ;
+; 12.500 ; 12.500       ; 0.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[11]|clk                          ;
+; 12.500 ; 12.500       ; 0.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[12]|clk                          ;
+; 12.500 ; 12.500       ; 0.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[12]|clk                          ;
+; 12.500 ; 12.500       ; 0.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[13]|clk                          ;
+; 12.500 ; 12.500       ; 0.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[13]|clk                          ;
+; 12.500 ; 12.500       ; 0.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[14]|clk                          ;
+; 12.500 ; 12.500       ; 0.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[14]|clk                          ;
+; 12.500 ; 12.500       ; 0.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[15]|clk                          ;
+; 12.500 ; 12.500       ; 0.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[15]|clk                          ;
+; 12.500 ; 12.500       ; 0.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[1]|clk                           ;
+; 12.500 ; 12.500       ; 0.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[1]|clk                           ;
+; 12.500 ; 12.500       ; 0.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[2]|clk                           ;
+; 12.500 ; 12.500       ; 0.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[2]|clk                           ;
+; 12.500 ; 12.500       ; 0.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[3]|clk                           ;
+; 12.500 ; 12.500       ; 0.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[3]|clk                           ;
+; 12.500 ; 12.500       ; 0.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[4]|clk                           ;
+; 12.500 ; 12.500       ; 0.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[4]|clk                           ;
+; 12.500 ; 12.500       ; 0.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[5]|clk                           ;
+; 12.500 ; 12.500       ; 0.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[5]|clk                           ;
+; 12.500 ; 12.500       ; 0.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[6]|clk                           ;
+; 12.500 ; 12.500       ; 0.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[6]|clk                           ;
+; 12.500 ; 12.500       ; 0.000          ; High Pulse Width ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[7]|clk                           ;
+; 12.500 ; 12.500       ; 0.000          ; Low Pulse Width  ; pll1|altpll_component|pll|clk[0] ; Rise       ; vga1|hState[7]|clk                           ;
++--------+--------------+----------------+------------------+----------------------------------+------------+----------------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                    ;
++-----------+------------+--------+--------+------------+----------------------------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference                  ;
++-----------+------------+--------+--------+------------+----------------------------------+
+; b         ; clk        ; 13.102 ; 13.102 ; Rise       ; pll1|altpll_component|pll|clk[0] ;
+; g         ; clk        ; 13.112 ; 13.112 ; Rise       ; pll1|altpll_component|pll|clk[0] ;
+; hSync     ; clk        ; 2.210  ; 2.210  ; Rise       ; pll1|altpll_component|pll|clk[0] ;
+; r         ; clk        ; 13.226 ; 13.226 ; Rise       ; pll1|altpll_component|pll|clk[0] ;
+; vSync     ; clk        ; 2.239  ; 2.239  ; Rise       ; pll1|altpll_component|pll|clk[0] ;
++-----------+------------+--------+--------+------------+----------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                          ;
++-----------+------------+-------+-------+------------+----------------------------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference                  ;
++-----------+------------+-------+-------+------------+----------------------------------+
+; b         ; clk        ; 3.926 ; 3.926 ; Rise       ; pll1|altpll_component|pll|clk[0] ;
+; g         ; clk        ; 3.936 ; 3.936 ; Rise       ; pll1|altpll_component|pll|clk[0] ;
+; hSync     ; clk        ; 2.210 ; 2.210 ; Rise       ; pll1|altpll_component|pll|clk[0] ;
+; r         ; clk        ; 4.050 ; 4.050 ; Rise       ; pll1|altpll_component|pll|clk[0] ;
+; vSync     ; clk        ; 2.239 ; 2.239 ; Rise       ; pll1|altpll_component|pll|clk[0] ;
++-----------+------------+-------+-------+------------+----------------------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                           ;
++-----------------------------------+--------+-------+----------+---------+---------------------+
+; Clock                             ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++-----------------------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack                  ; 13.211 ; 0.243 ; N/A      ; N/A     ; 10.000              ;
+;  clk                              ; N/A    ; N/A   ; N/A      ; N/A     ; 10.000              ;
+;  pll1|altpll_component|pll|clk[0] ; 13.211 ; 0.243 ; N/A      ; N/A     ; 11.258              ;
+; Design-wide TNS                   ; 0.0    ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  clk                              ; N/A    ; N/A   ; N/A      ; N/A     ; 0.000               ;
+;  pll1|altpll_component|pll|clk[0] ; 0.000  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
++-----------------------------------+--------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                    ;
++-----------+------------+--------+--------+------------+----------------------------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference                  ;
++-----------+------------+--------+--------+------------+----------------------------------+
+; b         ; clk        ; 39.383 ; 39.383 ; Rise       ; pll1|altpll_component|pll|clk[0] ;
+; g         ; clk        ; 39.393 ; 39.393 ; Rise       ; pll1|altpll_component|pll|clk[0] ;
+; hSync     ; clk        ; 5.440  ; 5.440  ; Rise       ; pll1|altpll_component|pll|clk[0] ;
+; r         ; clk        ; 39.805 ; 39.805 ; Rise       ; pll1|altpll_component|pll|clk[0] ;
+; vSync     ; clk        ; 5.472  ; 5.472  ; Rise       ; pll1|altpll_component|pll|clk[0] ;
++-----------+------------+--------+--------+------------+----------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                          ;
++-----------+------------+-------+-------+------------+----------------------------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference                  ;
++-----------+------------+-------+-------+------------+----------------------------------+
+; b         ; clk        ; 3.926 ; 3.926 ; Rise       ; pll1|altpll_component|pll|clk[0] ;
+; g         ; clk        ; 3.936 ; 3.936 ; Rise       ; pll1|altpll_component|pll|clk[0] ;
+; hSync     ; clk        ; 2.210 ; 2.210 ; Rise       ; pll1|altpll_component|pll|clk[0] ;
+; r         ; clk        ; 4.050 ; 4.050 ; Rise       ; pll1|altpll_component|pll|clk[0] ;
+; vSync     ; clk        ; 2.239 ; 2.239 ; Rise       ; pll1|altpll_component|pll|clk[0] ;
++-----------+------------+-------+-------+------------+----------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                 ;
++----------------------------------+----------------------------------+----------+----------+----------+----------+
+; From Clock                       ; To Clock                         ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------------------+----------------------------------+----------+----------+----------+----------+
+; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 906      ; 0        ; 0        ; 0        ;
++----------------------------------+----------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                  ;
++----------------------------------+----------------------------------+----------+----------+----------+----------+
+; From Clock                       ; To Clock                         ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------------------+----------------------------------+----------+----------+----------+----------+
+; pll1|altpll_component|pll|clk[0] ; pll1|altpll_component|pll|clk[0] ; 906      ; 0        ; 0        ; 0        ;
++----------------------------------+----------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 5     ; 5    ;
+; Unconstrained Output Port Paths ; 98    ; 98   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Jun 23 21:20:08 2015
+Info: Command: quartus_sta VGA -c VGA
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'VGA.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained generated clocks found in the design. Calling "derive_pll_clocks -create_base_clocks"
+Info (332110): Deriving PLL clocks
+    Info (332110): create_clock -period 20.000 -waveform {0.000 10.000} -name clk clk
+    Info (332110): create_generated_clock -source {pll1|altpll_component|pll|inclk[0]} -divide_by 5 -multiply_by 4 -duty_cycle 50.00 -name {pll1|altpll_component|pll|clk[0]} {pll1|altpll_component|pll|clk[0]}
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Info (332146): Worst-case setup slack is 13.211
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    13.211         0.000 pll1|altpll_component|pll|clk[0] 
+Info (332146): Worst-case hold slack is 0.753
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.753         0.000 pll1|altpll_component|pll|clk[0] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 10.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    10.000         0.000 clk 
+    Info (332119):    11.258         0.000 pll1|altpll_component|pll|clk[0] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332146): Worst-case setup slack is 20.998
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    20.998         0.000 pll1|altpll_component|pll|clk[0] 
+Info (332146): Worst-case hold slack is 0.243
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.243         0.000 pll1|altpll_component|pll|clk[0] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 10.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    10.000         0.000 clk 
+    Info (332119):    11.500         0.000 pll1|altpll_component|pll|clk[0] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 462 megabytes
+    Info: Processing ended: Tue Jun 23 21:20:11 2015
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+

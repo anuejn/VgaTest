@@ -1,0 +1,430 @@
+Simulator report for VGA
+Sun Jun 21 00:25:24 2015
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 196 nodes    ;
+; Simulation Coverage         ;      60.20 % ;
+; Total Number of Transitions ; 133576       ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                               ;
++--------------------------------------------------------------------------------------------+-------------------------------------+---------------+
+; Option                                                                                     ; Setting                             ; Default Value ;
++--------------------------------------------------------------------------------------------+-------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                          ; Timing        ;
+; Start time                                                                                 ; 0 ns                                ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                 ;               ;
+; Vector input source                                                                        ; C:/altera/Projects/VGA/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                  ; On            ;
+; Check outputs                                                                              ; Off                                 ; Off           ;
+; Report simulation coverage                                                                 ; On                                  ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                  ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                  ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                  ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                 ; Off           ;
+; Detect glitches                                                                            ; Off                                 ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                 ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                 ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                 ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                 ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                  ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                          ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                 ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                 ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                ; Auto          ;
++--------------------------------------------------------------------------------------------+-------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      60.20 % ;
+; Total nodes checked                                 ; 196          ;
+; Total output ports checked                          ; 196          ;
+; Total output ports with complete 1/0-value coverage ; 118          ;
+; Total output ports with no 1/0-value coverage       ; 72           ;
+; Total output ports with no 1-value coverage         ; 72           ;
+; Total output ports with no 0-value coverage         ; 78           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                      ;
++-----------------------+-----------------------+------------------+
+; Node Name             ; Output Port Name      ; Output Port Type ;
++-----------------------+-----------------------+------------------+
+; |main|vPixelState~7   ; |main|vPixelState~7   ; out              ;
+; |main|vPixelState~8   ; |main|vPixelState~8   ; out              ;
+; |main|vPixelState~9   ; |main|vPixelState~9   ; out              ;
+; |main|hPixelState~0   ; |main|hPixelState~0   ; out              ;
+; |main|hPixelState~1   ; |main|hPixelState~1   ; out              ;
+; |main|hPixelState~2   ; |main|hPixelState~2   ; out              ;
+; |main|hPixelState~3   ; |main|hPixelState~3   ; out              ;
+; |main|hPixelState~4   ; |main|hPixelState~4   ; out              ;
+; |main|hPixelState~5   ; |main|hPixelState~5   ; out              ;
+; |main|hPixelState~6   ; |main|hPixelState~6   ; out              ;
+; |main|hPixelState~7   ; |main|hPixelState~7   ; out              ;
+; |main|hPixelState~8   ; |main|hPixelState~8   ; out              ;
+; |main|hPixelState~9   ; |main|hPixelState~9   ; out              ;
+; |main|hPixelState~10  ; |main|hPixelState~10  ; out              ;
+; |main|intHc~1         ; |main|intHc~1         ; out              ;
+; |main|intHc~2         ; |main|intHc~2         ; out              ;
+; |main|intHc           ; |main|intHc           ; regout           ;
+; |main|vPixelState[0]  ; |main|vPixelState[0]  ; regout           ;
+; |main|vPixelState[1]  ; |main|vPixelState[1]  ; regout           ;
+; |main|vPixelState[2]  ; |main|vPixelState[2]  ; regout           ;
+; |main|hPixelState[0]  ; |main|hPixelState[0]  ; regout           ;
+; |main|hPixelState[1]  ; |main|hPixelState[1]  ; regout           ;
+; |main|hPixelState[2]  ; |main|hPixelState[2]  ; regout           ;
+; |main|hPixelState[3]  ; |main|hPixelState[3]  ; regout           ;
+; |main|hPixelState[4]  ; |main|hPixelState[4]  ; regout           ;
+; |main|hPixelState[5]  ; |main|hPixelState[5]  ; regout           ;
+; |main|hPixelState[6]  ; |main|hPixelState[6]  ; regout           ;
+; |main|hPixelState[7]  ; |main|hPixelState[7]  ; regout           ;
+; |main|hPixelState[8]  ; |main|hPixelState[8]  ; regout           ;
+; |main|hPixelState[9]  ; |main|hPixelState[9]  ; regout           ;
+; |main|hPixelState[10] ; |main|hPixelState[10] ; regout           ;
+; |main|clk             ; |main|clk             ; out              ;
+; |main|hc              ; |main|hc              ; pin_out          ;
+; |main|vclk[0]         ; |main|vclk[0]         ; pin_out          ;
+; |main|vclk[1]         ; |main|vclk[1]         ; pin_out          ;
+; |main|vclk[2]         ; |main|vclk[2]         ; pin_out          ;
+; |main|hclk[0]         ; |main|hclk[0]         ; pin_out          ;
+; |main|hclk[1]         ; |main|hclk[1]         ; pin_out          ;
+; |main|hclk[2]         ; |main|hclk[2]         ; pin_out          ;
+; |main|hclk[3]         ; |main|hclk[3]         ; pin_out          ;
+; |main|hclk[4]         ; |main|hclk[4]         ; pin_out          ;
+; |main|hclk[5]         ; |main|hclk[5]         ; pin_out          ;
+; |main|hclk[6]         ; |main|hclk[6]         ; pin_out          ;
+; |main|hclk[7]         ; |main|hclk[7]         ; pin_out          ;
+; |main|hclk[8]         ; |main|hclk[8]         ; pin_out          ;
+; |main|hclk[9]         ; |main|hclk[9]         ; pin_out          ;
+; |main|hclk[10]        ; |main|hclk[10]        ; pin_out          ;
+; |main|LessThan0~0     ; |main|LessThan0~0     ; out0             ;
+; |main|LessThan0~1     ; |main|LessThan0~1     ; out0             ;
+; |main|LessThan0~2     ; |main|LessThan0~2     ; out0             ;
+; |main|LessThan0~3     ; |main|LessThan0~3     ; out0             ;
+; |main|LessThan0~4     ; |main|LessThan0~4     ; out0             ;
+; |main|LessThan0~5     ; |main|LessThan0~5     ; out0             ;
+; |main|LessThan0~6     ; |main|LessThan0~6     ; out0             ;
+; |main|LessThan1~0     ; |main|LessThan1~0     ; out0             ;
+; |main|LessThan1~1     ; |main|LessThan1~1     ; out0             ;
+; |main|LessThan1~2     ; |main|LessThan1~2     ; out0             ;
+; |main|LessThan1~3     ; |main|LessThan1~3     ; out0             ;
+; |main|LessThan1~4     ; |main|LessThan1~4     ; out0             ;
+; |main|LessThan1~5     ; |main|LessThan1~5     ; out0             ;
+; |main|LessThan1~6     ; |main|LessThan1~6     ; out0             ;
+; |main|LessThan1~7     ; |main|LessThan1~7     ; out0             ;
+; |main|LessThan1~8     ; |main|LessThan1~8     ; out0             ;
+; |main|LessThan1~9     ; |main|LessThan1~9     ; out0             ;
+; |main|LessThan1~10    ; |main|LessThan1~10    ; out0             ;
+; |main|LessThan2~0     ; |main|LessThan2~0     ; out0             ;
+; |main|LessThan2~1     ; |main|LessThan2~1     ; out0             ;
+; |main|LessThan2~2     ; |main|LessThan2~2     ; out0             ;
+; |main|LessThan2~3     ; |main|LessThan2~3     ; out0             ;
+; |main|LessThan2~4     ; |main|LessThan2~4     ; out0             ;
+; |main|LessThan2~5     ; |main|LessThan2~5     ; out0             ;
+; |main|LessThan2~6     ; |main|LessThan2~6     ; out0             ;
+; |main|LessThan2~7     ; |main|LessThan2~7     ; out0             ;
+; |main|LessThan2~8     ; |main|LessThan2~8     ; out0             ;
+; |main|LessThan2~9     ; |main|LessThan2~9     ; out0             ;
+; |main|LessThan3~0     ; |main|LessThan3~0     ; out0             ;
+; |main|LessThan3~1     ; |main|LessThan3~1     ; out0             ;
+; |main|LessThan3~2     ; |main|LessThan3~2     ; out0             ;
+; |main|LessThan3~3     ; |main|LessThan3~3     ; out0             ;
+; |main|LessThan3~4     ; |main|LessThan3~4     ; out0             ;
+; |main|LessThan3~5     ; |main|LessThan3~5     ; out0             ;
+; |main|LessThan3~6     ; |main|LessThan3~6     ; out0             ;
+; |main|LessThan5~0     ; |main|LessThan5~0     ; out0             ;
+; |main|LessThan5~1     ; |main|LessThan5~1     ; out0             ;
+; |main|LessThan5~2     ; |main|LessThan5~2     ; out0             ;
+; |main|LessThan5~3     ; |main|LessThan5~3     ; out0             ;
+; |main|LessThan6~0     ; |main|LessThan6~0     ; out0             ;
+; |main|LessThan6~1     ; |main|LessThan6~1     ; out0             ;
+; |main|LessThan6~2     ; |main|LessThan6~2     ; out0             ;
+; |main|LessThan6~3     ; |main|LessThan6~3     ; out0             ;
+; |main|LessThan6~4     ; |main|LessThan6~4     ; out0             ;
+; |main|LessThan6~5     ; |main|LessThan6~5     ; out0             ;
+; |main|LessThan6~6     ; |main|LessThan6~6     ; out0             ;
+; |main|LessThan7~0     ; |main|LessThan7~0     ; out0             ;
+; |main|LessThan7~1     ; |main|LessThan7~1     ; out0             ;
+; |main|Add0~0          ; |main|Add0~0          ; out0             ;
+; |main|Add0~1          ; |main|Add0~1          ; out0             ;
+; |main|Add0~2          ; |main|Add0~2          ; out0             ;
+; |main|Add0~3          ; |main|Add0~3          ; out0             ;
+; |main|Add0~4          ; |main|Add0~4          ; out0             ;
+; |main|Add0~5          ; |main|Add0~5          ; out0             ;
+; |main|Add0~6          ; |main|Add0~6          ; out0             ;
+; |main|Add0~7          ; |main|Add0~7          ; out0             ;
+; |main|Add0~8          ; |main|Add0~8          ; out0             ;
+; |main|Add0~9          ; |main|Add0~9          ; out0             ;
+; |main|Add0~10         ; |main|Add0~10         ; out0             ;
+; |main|Add0~11         ; |main|Add0~11         ; out0             ;
+; |main|Add0~12         ; |main|Add0~12         ; out0             ;
+; |main|Add0~13         ; |main|Add0~13         ; out0             ;
+; |main|Add0~14         ; |main|Add0~14         ; out0             ;
+; |main|Add0~15         ; |main|Add0~15         ; out0             ;
+; |main|Add0~16         ; |main|Add0~16         ; out0             ;
+; |main|Add0~17         ; |main|Add0~17         ; out0             ;
+; |main|Add0~18         ; |main|Add0~18         ; out0             ;
+; |main|Add1~0          ; |main|Add1~0          ; out0             ;
+; |main|Add1~1          ; |main|Add1~1          ; out0             ;
+; |main|Add1~2          ; |main|Add1~2          ; out0             ;
+; |main|Add1~3          ; |main|Add1~3          ; out0             ;
++-----------------------+-----------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------+
+; Missing 1-Value Coverage                                       ;
++----------------------+----------------------+------------------+
+; Node Name            ; Output Port Name     ; Output Port Type ;
++----------------------+----------------------+------------------+
+; |main|vPixelState~0  ; |main|vPixelState~0  ; out              ;
+; |main|vPixelState~1  ; |main|vPixelState~1  ; out              ;
+; |main|vPixelState~2  ; |main|vPixelState~2  ; out              ;
+; |main|vPixelState~3  ; |main|vPixelState~3  ; out              ;
+; |main|vPixelState~4  ; |main|vPixelState~4  ; out              ;
+; |main|vPixelState~5  ; |main|vPixelState~5  ; out              ;
+; |main|intHc~0        ; |main|intHc~0        ; out              ;
+; |main|intVc~0        ; |main|intVc~0        ; out              ;
+; |main|intVc~1        ; |main|intVc~1        ; out              ;
+; |main|intVc~2        ; |main|intVc~2        ; out              ;
+; |main|intVc          ; |main|intVc          ; regout           ;
+; |main|vPixelState[4] ; |main|vPixelState[4] ; regout           ;
+; |main|vPixelState[5] ; |main|vPixelState[5] ; regout           ;
+; |main|vPixelState[6] ; |main|vPixelState[6] ; regout           ;
+; |main|vPixelState[7] ; |main|vPixelState[7] ; regout           ;
+; |main|vPixelState[8] ; |main|vPixelState[8] ; regout           ;
+; |main|vPixelState[9] ; |main|vPixelState[9] ; regout           ;
+; |main|vc             ; |main|vc             ; pin_out          ;
+; |main|r              ; |main|r              ; pin_out          ;
+; |main|g              ; |main|g              ; pin_out          ;
+; |main|b              ; |main|b              ; pin_out          ;
+; |main|vclk[4]        ; |main|vclk[4]        ; pin_out          ;
+; |main|vclk[5]        ; |main|vclk[5]        ; pin_out          ;
+; |main|vclk[6]        ; |main|vclk[6]        ; pin_out          ;
+; |main|vclk[7]        ; |main|vclk[7]        ; pin_out          ;
+; |main|vclk[8]        ; |main|vclk[8]        ; pin_out          ;
+; |main|vclk[9]        ; |main|vclk[9]        ; pin_out          ;
+; |main|LessThan4~0    ; |main|LessThan4~0    ; out0             ;
+; |main|LessThan4~1    ; |main|LessThan4~1    ; out0             ;
+; |main|LessThan4~2    ; |main|LessThan4~2    ; out0             ;
+; |main|LessThan4~3    ; |main|LessThan4~3    ; out0             ;
+; |main|LessThan4~4    ; |main|LessThan4~4    ; out0             ;
+; |main|LessThan4~5    ; |main|LessThan4~5    ; out0             ;
+; |main|LessThan4~6    ; |main|LessThan4~6    ; out0             ;
+; |main|LessThan4~7    ; |main|LessThan4~7    ; out0             ;
+; |main|LessThan4~8    ; |main|LessThan4~8    ; out0             ;
+; |main|LessThan5~5    ; |main|LessThan5~5    ; out0             ;
+; |main|LessThan5~6    ; |main|LessThan5~6    ; out0             ;
+; |main|LessThan5~7    ; |main|LessThan5~7    ; out0             ;
+; |main|LessThan5~8    ; |main|LessThan5~8    ; out0             ;
+; |main|LessThan5~9    ; |main|LessThan5~9    ; out0             ;
+; |main|LessThan5~10   ; |main|LessThan5~10   ; out0             ;
+; |main|LessThan5~11   ; |main|LessThan5~11   ; out0             ;
+; |main|LessThan5~12   ; |main|LessThan5~12   ; out0             ;
+; |main|LessThan5~13   ; |main|LessThan5~13   ; out0             ;
+; |main|LessThan5~14   ; |main|LessThan5~14   ; out0             ;
+; |main|LessThan6~7    ; |main|LessThan6~7    ; out0             ;
+; |main|LessThan6~8    ; |main|LessThan6~8    ; out0             ;
+; |main|LessThan6~9    ; |main|LessThan6~9    ; out0             ;
+; |main|LessThan6~10   ; |main|LessThan6~10   ; out0             ;
+; |main|LessThan6~11   ; |main|LessThan6~11   ; out0             ;
+; |main|LessThan7~3    ; |main|LessThan7~3    ; out0             ;
+; |main|LessThan7~4    ; |main|LessThan7~4    ; out0             ;
+; |main|LessThan7~5    ; |main|LessThan7~5    ; out0             ;
+; |main|LessThan7~6    ; |main|LessThan7~6    ; out0             ;
+; |main|LessThan7~7    ; |main|LessThan7~7    ; out0             ;
+; |main|LessThan7~8    ; |main|LessThan7~8    ; out0             ;
+; |main|LessThan7~9    ; |main|LessThan7~9    ; out0             ;
+; |main|LessThan7~10   ; |main|LessThan7~10   ; out0             ;
+; |main|LessThan7~11   ; |main|LessThan7~11   ; out0             ;
+; |main|Add1~5         ; |main|Add1~5         ; out0             ;
+; |main|Add1~6         ; |main|Add1~6         ; out0             ;
+; |main|Add1~7         ; |main|Add1~7         ; out0             ;
+; |main|Add1~8         ; |main|Add1~8         ; out0             ;
+; |main|Add1~9         ; |main|Add1~9         ; out0             ;
+; |main|Add1~10        ; |main|Add1~10        ; out0             ;
+; |main|Add1~11        ; |main|Add1~11        ; out0             ;
+; |main|Add1~12        ; |main|Add1~12        ; out0             ;
+; |main|Add1~13        ; |main|Add1~13        ; out0             ;
+; |main|Add1~14        ; |main|Add1~14        ; out0             ;
+; |main|Add1~15        ; |main|Add1~15        ; out0             ;
+; |main|Add1~16        ; |main|Add1~16        ; out0             ;
++----------------------+----------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------+
+; Missing 0-Value Coverage                                       ;
++----------------------+----------------------+------------------+
+; Node Name            ; Output Port Name     ; Output Port Type ;
++----------------------+----------------------+------------------+
+; |main|vPixelState~0  ; |main|vPixelState~0  ; out              ;
+; |main|vPixelState~1  ; |main|vPixelState~1  ; out              ;
+; |main|vPixelState~2  ; |main|vPixelState~2  ; out              ;
+; |main|vPixelState~3  ; |main|vPixelState~3  ; out              ;
+; |main|vPixelState~4  ; |main|vPixelState~4  ; out              ;
+; |main|vPixelState~5  ; |main|vPixelState~5  ; out              ;
+; |main|vPixelState~6  ; |main|vPixelState~6  ; out              ;
+; |main|intHc~0        ; |main|intHc~0        ; out              ;
+; |main|intVc~0        ; |main|intVc~0        ; out              ;
+; |main|intVc~1        ; |main|intVc~1        ; out              ;
+; |main|intVc~2        ; |main|intVc~2        ; out              ;
+; |main|intVc          ; |main|intVc          ; regout           ;
+; |main|vPixelState[3] ; |main|vPixelState[3] ; regout           ;
+; |main|vPixelState[4] ; |main|vPixelState[4] ; regout           ;
+; |main|vPixelState[5] ; |main|vPixelState[5] ; regout           ;
+; |main|vPixelState[6] ; |main|vPixelState[6] ; regout           ;
+; |main|vPixelState[7] ; |main|vPixelState[7] ; regout           ;
+; |main|vPixelState[8] ; |main|vPixelState[8] ; regout           ;
+; |main|vPixelState[9] ; |main|vPixelState[9] ; regout           ;
+; |main|vc             ; |main|vc             ; pin_out          ;
+; |main|r              ; |main|r              ; pin_out          ;
+; |main|g              ; |main|g              ; pin_out          ;
+; |main|b              ; |main|b              ; pin_out          ;
+; |main|vclk[3]        ; |main|vclk[3]        ; pin_out          ;
+; |main|vclk[4]        ; |main|vclk[4]        ; pin_out          ;
+; |main|vclk[5]        ; |main|vclk[5]        ; pin_out          ;
+; |main|vclk[6]        ; |main|vclk[6]        ; pin_out          ;
+; |main|vclk[7]        ; |main|vclk[7]        ; pin_out          ;
+; |main|vclk[8]        ; |main|vclk[8]        ; pin_out          ;
+; |main|vclk[9]        ; |main|vclk[9]        ; pin_out          ;
+; |main|LessThan4~0    ; |main|LessThan4~0    ; out0             ;
+; |main|LessThan4~1    ; |main|LessThan4~1    ; out0             ;
+; |main|LessThan4~2    ; |main|LessThan4~2    ; out0             ;
+; |main|LessThan4~3    ; |main|LessThan4~3    ; out0             ;
+; |main|LessThan4~4    ; |main|LessThan4~4    ; out0             ;
+; |main|LessThan4~5    ; |main|LessThan4~5    ; out0             ;
+; |main|LessThan4~6    ; |main|LessThan4~6    ; out0             ;
+; |main|LessThan4~7    ; |main|LessThan4~7    ; out0             ;
+; |main|LessThan4~8    ; |main|LessThan4~8    ; out0             ;
+; |main|LessThan5~4    ; |main|LessThan5~4    ; out0             ;
+; |main|LessThan5~5    ; |main|LessThan5~5    ; out0             ;
+; |main|LessThan5~6    ; |main|LessThan5~6    ; out0             ;
+; |main|LessThan5~7    ; |main|LessThan5~7    ; out0             ;
+; |main|LessThan5~8    ; |main|LessThan5~8    ; out0             ;
+; |main|LessThan5~9    ; |main|LessThan5~9    ; out0             ;
+; |main|LessThan5~10   ; |main|LessThan5~10   ; out0             ;
+; |main|LessThan5~11   ; |main|LessThan5~11   ; out0             ;
+; |main|LessThan5~12   ; |main|LessThan5~12   ; out0             ;
+; |main|LessThan5~13   ; |main|LessThan5~13   ; out0             ;
+; |main|LessThan5~14   ; |main|LessThan5~14   ; out0             ;
+; |main|LessThan6~7    ; |main|LessThan6~7    ; out0             ;
+; |main|LessThan6~8    ; |main|LessThan6~8    ; out0             ;
+; |main|LessThan6~9    ; |main|LessThan6~9    ; out0             ;
+; |main|LessThan6~10   ; |main|LessThan6~10   ; out0             ;
+; |main|LessThan6~11   ; |main|LessThan6~11   ; out0             ;
+; |main|LessThan7~2    ; |main|LessThan7~2    ; out0             ;
+; |main|LessThan7~3    ; |main|LessThan7~3    ; out0             ;
+; |main|LessThan7~4    ; |main|LessThan7~4    ; out0             ;
+; |main|LessThan7~5    ; |main|LessThan7~5    ; out0             ;
+; |main|LessThan7~6    ; |main|LessThan7~6    ; out0             ;
+; |main|LessThan7~7    ; |main|LessThan7~7    ; out0             ;
+; |main|LessThan7~8    ; |main|LessThan7~8    ; out0             ;
+; |main|LessThan7~9    ; |main|LessThan7~9    ; out0             ;
+; |main|LessThan7~10   ; |main|LessThan7~10   ; out0             ;
+; |main|LessThan7~11   ; |main|LessThan7~11   ; out0             ;
+; |main|Add1~4         ; |main|Add1~4         ; out0             ;
+; |main|Add1~5         ; |main|Add1~5         ; out0             ;
+; |main|Add1~6         ; |main|Add1~6         ; out0             ;
+; |main|Add1~7         ; |main|Add1~7         ; out0             ;
+; |main|Add1~8         ; |main|Add1~8         ; out0             ;
+; |main|Add1~9         ; |main|Add1~9         ; out0             ;
+; |main|Add1~10        ; |main|Add1~10        ; out0             ;
+; |main|Add1~11        ; |main|Add1~11        ; out0             ;
+; |main|Add1~12        ; |main|Add1~12        ; out0             ;
+; |main|Add1~13        ; |main|Add1~13        ; out0             ;
+; |main|Add1~14        ; |main|Add1~14        ; out0             ;
+; |main|Add1~15        ; |main|Add1~15        ; out0             ;
+; |main|Add1~16        ; |main|Add1~16        ; out0             ;
++----------------------+----------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Jun 21 00:25:23 2015
+Info: Command: quartus_sim --simulation_results_format=VWF VGA -c VGA
+Info (324025): Using vector source file "C:/altera/Projects/VGA/Waveform.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      60.20 %
+Info (328052): Number of transitions in simulation is 133576
+Info (324045): Vector file VGA.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 318 megabytes
+    Info: Processing ended: Sun Jun 21 00:25:24 2015
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
